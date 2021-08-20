@@ -1,5 +1,5 @@
 {
-	"name": "wpsyntex/composer-cs",
+	"name": "wpsyntex/polylang-cs",
 	"description": "Coding standards for WP Syntex's plugins",
 	"license": "MIT",
 	"homepage": "https://github.com/polylang/polylang-cs",
