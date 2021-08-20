@@ -2,12 +2,12 @@
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Polylang" namespace="PolylangCS\Polylang" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
 	<description>Coding standards for WP Syntex's plugins.</description>
 
-	<exclude-pattern>.git/*</exclude-pattern>
-	<exclude-pattern>.github/*</exclude-pattern>
-	<exclude-pattern>.wordpress-org/*</exclude-pattern>
-	<exclude-pattern>bin/*</exclude-pattern>
-	<exclude-pattern>tmp/*</exclude-pattern>
-	<exclude-pattern>vendor/*</exclude-pattern>
+	<exclude-pattern>./.git/*</exclude-pattern>
+	<exclude-pattern>./.github/*</exclude-pattern>
+	<exclude-pattern>./.wordpress-org/*</exclude-pattern>
+	<exclude-pattern>./bin/*</exclude-pattern>
+	<exclude-pattern>./tmp/*</exclude-pattern>
+	<exclude-pattern>./vendor/*</exclude-pattern>
 
 	<!-- Run against the PHPCompatibility ruleset: PHP 5.6 and higher + WP 5.4 and higher. -->
 	<!-- https://github.com/PHPCompatibility/PHPCompatibilityWP -->
