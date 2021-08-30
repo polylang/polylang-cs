@@ -8,6 +8,7 @@
 		"sort-packages": true
 	},
 	"require": {
+		"automattic/phpcs-neutron-standard": "*",
 		"automattic/vipwpcs": "*",
 		"dealerdirect/phpcodesniffer-composer-installer": "*",
 		"phpcompatibility/phpcompatibility-wp": "^2.1",
