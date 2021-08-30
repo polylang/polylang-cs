@@ -37,14 +37,16 @@
 		<exclude name="Squiz.NamingConventions.ValidVariableName.PrivateNoUnderscore"/><!-- No leading underscores for private properties. -->
 	</rule>
 
+	<!-- Run against WordPress VIP ruleset. -->
+	<!-- https://github.com/Automattic/VIP-Coding-Standards -->
+	<rule ref="WordPressVIPMinimum">
+		<exclude-pattern>*/tests/*</exclude-pattern>
+		<exclude-pattern>*/Tests/*</exclude-pattern>
+	</rule>
+
 	<!-- Run against WordPress ruleset. -->
 	<!-- https://github.com/WordPress/WordPress-Coding-Standards -->
 	<rule ref="WordPress">
-		<!-- Set the minimum supported WP version for all sniff which use it in one go. -->
-		<!-- https://github.com/WordPress/WordPress-Coding-Standards/wiki/Customizable-sniff-properties#minimum-wp-version-to-check-for-usage-of-deprecated-functions-classes-and-function-parameters -->
-		<properties>
-			<property name="minimum_supported_version" value="5.4"/>
-		</properties>
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
 		<exclude name="PHPCompatibility.FunctionNameRestrictions.ReservedFunctionNames.FunctionDoubleUnderscore"/><!-- Handled by Squiz.NamingConventions.ValidFunctionName.DoubleUnderscore. -->
 		<exclude name="PHPCompatibility.FunctionNameRestrictions.ReservedFunctionNames.MethodDoubleUnderscore"/><!-- Handled by WordPress.NamingConventions.ValidFunctionName.MethodDoubleUnderscore. -->
@@ -53,6 +55,18 @@
 		<exclude name="WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid"/><!-- No snake case for function names. -->
 		<exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid"/><!-- No snake case for method names. -->
 		<exclude name="WordPress.NamingConventions.ValidVariableName"/>
+	</rule>
+	<rule ref="WordPress.PHP.NoSilencedErrors.Discouraged">
+		<exclude-pattern>*/tests/*</exclude-pattern>
+		<exclude-pattern>*/Tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.Security">
+		<exclude-pattern>*/tests/*</exclude-pattern>
+		<exclude-pattern>*/Tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.WP.GlobalVariablesOverride">
+		<exclude-pattern>*/tests/*</exclude-pattern>
+		<exclude-pattern>*/Tests/*</exclude-pattern>
 	</rule>
 
 	<!-- Run against the PSR-4 ruleset. -->
