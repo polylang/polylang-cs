@@ -16,7 +16,7 @@ Set of [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) rules.
 
 The following rulesets are included:
 
-- Several custom sniffs mainly focuse on naming conventions,
+- Several custom sniffs mainly focused on naming conventions,
 - [NeutronStandard](https://github.com/Automattic/phpcs-neutron-standard),
 - [PHPCompatibilityWP](https://github.com/PHPCompatibility/PHPCompatibilityWP) (PHP 5.6 and WP 5.4),
 - [Suin](https://github.com/suin/phpcs-psr4-sniff) (for PSR-4),
