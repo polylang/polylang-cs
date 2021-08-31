@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Polylang" namespace="PolylangCS\Polylang" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
+	<description>Coding standards for WP Syntex's plugins.</description>
+
+	<exclude-pattern>./.git/*</exclude-pattern>
+	<exclude-pattern>./.github/*</exclude-pattern>
+	<exclude-pattern>./.wordpress-org/*</exclude-pattern>
+	<exclude-pattern>./bin/*</exclude-pattern>
+	<exclude-pattern>./tmp/*</exclude-pattern>
+	<exclude-pattern>./vendor/*</exclude-pattern>
+
+	<!-- Run against the PHPCompatibility ruleset: PHP 5.6 and higher + WP 5.4 and higher. -->
+	<!-- https://github.com/PHPCompatibility/PHPCompatibilityWP -->
+	<rule ref="PHPCompatibilityWP"/>
+	<config name="testVersion" value="5.6-"/>
+	<config name="minimum_supported_wp_version" value="5.4"/>
+
+	<!-- Run against custom rules. -->
+	<!-- https://github.com/squizlabs/PHP_CodeSniffer -->
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+	<rule ref="Generic.NamingConventions.AbstractClassNamePrefix"/>
+	<rule ref="Generic.NamingConventions.ConstructorName"/>
+	<rule ref="Generic.NamingConventions.InterfaceNameSuffix"/>
+	<rule ref="Generic.NamingConventions.TraitNameSuffix"/>
+	<rule ref="PSR2.Methods.MethodDeclaration.Underscore">
+		<type>Error</type>
+		<message>Method name "%s" must not be prefixed with an underscore</message>
+	</rule>
+	<rule ref="PSR2.Classes.PropertyDeclaration.Underscore">
+		<type>Error</type>
+		<message>Property name "%s" must not be prefixed with an underscore</message>
+	</rule>
+	<rule ref="Squiz.NamingConventions">
+		<exclude name="Squiz.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/><!-- No leading underscores for private methods. -->
+		<exclude name="Squiz.NamingConventions.ValidFunctionName.MethodDoubleUnderscore"/><!-- Handled by WordPress.NamingConventions.ValidFunctionName.MethodDoubleUnderscore. -->
+		<exclude name="Squiz.NamingConventions.ValidFunctionName.PublicUnderscore"/><!-- Handled by PSR2.Methods.MethodDeclaration.Underscore. -->
+		<exclude name="Squiz.NamingConventions.ValidVariableName.PrivateNoUnderscore"/><!-- No leading underscores for private properties. -->
+	</rule>
+
+	<!-- Run against WordPress ruleset. -->
+	<!-- https://github.com/WordPress/WordPress-Coding-Standards -->
+	<rule ref="WordPress">
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+		<exclude name="PHPCompatibility.FunctionNameRestrictions.ReservedFunctionNames.FunctionDoubleUnderscore"/><!-- Handled by Squiz.NamingConventions.ValidFunctionName.DoubleUnderscore. -->
+		<exclude name="PHPCompatibility.FunctionNameRestrictions.ReservedFunctionNames.MethodDoubleUnderscore"/><!-- Handled by WordPress.NamingConventions.ValidFunctionName.MethodDoubleUnderscore. -->
+		<exclude name="WordPress.Files.FileName"/>
+		<exclude name="WordPress.NamingConventions.ValidFunctionName.FunctionDoubleUnderscore"/><!-- Handled by Squiz.NamingConventions.ValidFunctionName.DoubleUnderscore. -->
+		<exclude name="WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid"/><!-- No snake case for function names. -->
+		<exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid"/><!-- No snake case for method names. -->
+		<exclude name="WordPress.NamingConventions.ValidVariableName"/>
+	</rule>
+	<rule ref="WordPress.PHP.NoSilencedErrors.Discouraged">
+		<exclude-pattern>*/tests/*</exclude-pattern>
+		<exclude-pattern>*/Tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.Security">
+		<exclude-pattern>*/tests/*</exclude-pattern>
+		<exclude-pattern>*/Tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.WP.GlobalVariablesOverride">
+		<exclude-pattern>*/tests/*</exclude-pattern>
+		<exclude-pattern>*/Tests/*</exclude-pattern>
+	</rule>
+
+	<!-- Run against WordPress VIP ruleset. -->
+	<!-- https://github.com/Automattic/VIP-Coding-Standards -->
+	<rule ref="WordPressVIPMinimum">
+		<exclude-pattern>*/tests/*</exclude-pattern>
+		<exclude-pattern>*/Tests/*</exclude-pattern>
+	</rule>
+
+	<!-- Run against the NeutronStandard ruleset. -->
+	<!-- https://github.com/Automattic/phpcs-neutron-standard -->
+	<rule ref="NeutronStandard">
+		<exclude name="NeutronStandard.AssignAlign.DisallowAssignAlign.Aligned"/>
+		<exclude name="NeutronStandard.Constants.DisallowDefine.Define"/>
+		<exclude name="NeutronStandard.Functions.DisallowCallUserFunc.CallUserFunc"/>
+		<exclude name="NeutronStandard.Functions.LongFunction.LongFunction"/>
+		<exclude name="NeutronStandard.Functions.TypeHint.NoArgumentType"/>
+		<exclude name="NeutronStandard.Functions.TypeHint.NoReturnType"/>
+		<exclude name="NeutronStandard.StrictTypes.RequireStrictTypes.StrictTypes"/>
+	</rule>
+
+	<!-- Run against the PSR-4 ruleset. -->
+	<!-- https://github.com/suin/phpcs-psr4-sniff -->
+	<rule ref="Suin"/>
+	<!--
+	Put `<arg name="basepath" value="."/>` in your phpcs.xml file to indicate the location of the composer.json file.
+	-->
+</ruleset>

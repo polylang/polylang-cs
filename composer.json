@@ -1,0 +1,20 @@
+{
+	"name": "wpsyntex/polylang-cs",
+	"description": "Coding standards for WP Syntex's plugins",
+	"license": "MIT",
+	"homepage": "https://github.com/polylang/polylang-cs",
+	"type": "phpcodesniffer-standard",
+	"config": {
+		"sort-packages": true
+	},
+	"require": {
+		"automattic/phpcs-neutron-standard": "*",
+		"automattic/vipwpcs": "*",
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"roave/security-advisories": "dev-master",
+		"squizlabs/php_codesniffer": "^3.6",
+		"suin/phpcs-psr4-sniff": "^3.0",
+		"wp-coding-standards/wpcs": "^2.3"
+	}
+}
