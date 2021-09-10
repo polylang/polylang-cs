@@ -15,8 +15,20 @@
 	<config name="testVersion" value="5.6-"/>
 	<config name="minimum_supported_wp_version" value="5.4"/>
 
-	<!-- Run against custom rules. -->
+	<!-- Run against generic formatting rules. -->
 	<!-- https://github.com/squizlabs/PHP_CodeSniffer -->
+	<rule ref="Generic.Arrays.ArrayIndent"/>
+	<rule ref="Generic.WhiteSpace.IncrementDecrementSpacing"/>
+	<rule ref="Generic.WhiteSpace.LanguageConstructSpacing"/>
+	<rule ref="PEAR.Commenting.FileComment.MissingVersion"/>
+	<rule ref="PEAR.Functions.FunctionDeclaration.SpaceAfterFunction"/>
+	<rule ref="Squiz.Commenting.LongConditionClosingComment.Missing"/>
+	<rule ref="Squiz.ControlStructures.SwitchDeclaration.MissingDefault"/>
+	<rule ref="Squiz.Functions.MultiLineFunctionDeclaration.SpaceAfterFunction"/>
+	<rule ref="Squiz.PHP.GlobalKeyword.NotAllowed"/>
+	<rule ref="Squiz.WhiteSpace.ControlStructureSpacing.NoLineAfterClose"/>
+
+	<!-- Run against naming convention rules. -->
 	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
 	<rule ref="Generic.NamingConventions.AbstractClassNamePrefix"/>
 	<rule ref="Generic.NamingConventions.ConstructorName"/>
