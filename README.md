@@ -1,5 +1,8 @@
 # Polylang Coding Standards
 
+[![Version](https://badgen.net/packagist/v/wpsyntex/polylang-cs)](https://packagist.org/packages/wpsyntex/polylang-cs)
+[![License: MIT](https://badgen.net/github/license/polylang/polylang-cs)](https://github.com/polylang/polylang-cs/blob/main/LICENSE)
+
 Polylang Coding Standards is a ruleset for code quality tools to be used in WP Syntex's projects.
 
 ## Installation
@@ -7,7 +10,7 @@ Polylang Coding Standards is a ruleset for code quality tools to be used in WP S
 Standards are provided as a [Composer](https://getcomposer.org/) package and can be installed with:
 
 ```bash
-composer require --dev wpsyntex/polylang-cs:^1.0
+composer require --dev wpsyntex/polylang-cs:dev-main
 ```
 
 ## PHP Code Sniffer
