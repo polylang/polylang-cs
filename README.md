@@ -1,7 +1,7 @@
 # Polylang Coding Standards
 
-[![Version](https://badgen.net/packagist/v/wpsyntex/polylang-cs)](https://packagist.org/packages/wpsyntex/polylang-cs)
-[![License: MIT](https://badgen.net/github/license/polylang/polylang-cs)](https://github.com/polylang/polylang-cs/blob/main/LICENSE)
+[![Version](https://img.shields.io/badge/packagist-dev--main-blue)](https://packagist.org/packages/wpsyntex/polylang-cs)
+[![License: MIT](https://img.shields.io/github/license/polylang/polylang-cs)](https://github.com/polylang/polylang-cs/blob/main/LICENSE)
 
 Polylang Coding Standards is a ruleset for code quality tools to be used in WP Syntex's projects.
 
