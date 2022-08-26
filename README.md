@@ -21,7 +21,7 @@ The following rulesets are included:
 
 - Several custom sniffs mainly focused on naming conventions,
 - [NeutronStandard](https://github.com/Automattic/phpcs-neutron-standard),
-- [PHPCompatibilityWP](https://github.com/PHPCompatibility/PHPCompatibilityWP) (PHP 5.6 and WP 5.4),
+- [PHPCompatibilityWP](https://github.com/PHPCompatibility/PHPCompatibilityWP) (for PHP and WP version),
 - [Suin](https://github.com/suin/phpcs-psr4-sniff) (for PSR-4),
 - [WordPress](https://github.com/WordPress/WordPress-Coding-Standards),
 - [WordPressVIPMinimum](https://github.com/Automattic/VIP-Coding-Standards).
@@ -44,6 +44,10 @@ Example for your `phpcs.xml.dist` file:
         <exclude name="Squiz.PHP.CommentedOutCode.Found"/>
         <exclude name="WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize"/>
     </rule>
+
+    <!-- Run against the PHPCompatibility ruleset: PHP 5.6 and higher + WP 5.4 and higher. -->
+    <config name="testVersion" value="5.6-"/>
+    <config name="minimum_supported_wp_version" value="5.4"/>
 
     <!-- Run against the PSR-4 ruleset. -->
     <!-- https://github.com/suin/phpcs-psr4-sniff -->
