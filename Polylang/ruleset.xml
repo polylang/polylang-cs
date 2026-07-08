@@ -68,6 +68,7 @@
 	<!-- https://github.com/WordPress/WordPress-Coding-Standards -->
 	<rule ref="WordPress">
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
 		<exclude name="PHPCompatibility.FunctionNameRestrictions.ReservedFunctionNames.FunctionDoubleUnderscore"/><!-- Handled by Squiz.NamingConventions.ValidFunctionName.DoubleUnderscore. -->
 		<exclude name="PHPCompatibility.FunctionNameRestrictions.ReservedFunctionNames.MethodDoubleUnderscore"/><!-- Handled by WordPress.NamingConventions.ValidFunctionName.MethodDoubleUnderscore. -->
 		<exclude name="WordPress.Files.FileName"/>

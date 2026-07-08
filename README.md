@@ -22,7 +22,7 @@ The following rulesets are included:
 - Several custom sniffs mainly focused on naming conventions,
 - [NeutronStandard](https://github.com/Automattic/phpcs-neutron-standard),
 - [PHPCompatibilityWP](https://github.com/PHPCompatibility/PHPCompatibilityWP) (for PHP and WP version),
-- [Suin](https://github.com/suin/phpcs-psr4-sniff) (for PSR-4),
+- [Suin](https://github.com/suin/phpcs-psr4-sniff) (unmaintained; breaks on PHP 8.2+ with deprecation errors. Exclude `Suin.Classes.PSR4` in your `phpcs.xml.dist` and enforce PSR-4 with `composer.json` `autoload.psr-4` instead),
 - [WordPress](https://github.com/WordPress/WordPress-Coding-Standards),
 - [WordPressVIPMinimum](https://github.com/Automattic/VIP-Coding-Standards).
 
@@ -48,9 +48,7 @@ Example for your `phpcs.xml.dist` file:
     <!-- Run against the PHPCompatibility ruleset: PHP 5.6 and higher + WP 5.4 and higher. -->
     <config name="testVersion" value="5.6-"/>
     <config name="minimum_supported_wp_version" value="5.4"/>
-
-    <!-- Run against the PSR-4 ruleset. -->
-    <!-- https://github.com/suin/phpcs-psr4-sniff -->
-    <arg name="basepath" value="."/>
 </ruleset>
 ```
+
+When referencing this ruleset with nested `<exclude>` rules, omit `<arg name="cache"/>` (PHPCS cache can ignore them).
